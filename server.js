@@ -40,9 +40,19 @@ const complements = [
     "You've learned a lot of things, and that's pretty hard to do"
 ];
 
-function getRandomComplement(){
-    const randomIndex = Math.floor(Math.random() * complements.length);
-    return complements[randomIndex];
+const verseDay = [
+    "Keep your lives free from the love of money and be content with what you have, because God has said, 'Never will I leave you; never will I forsake you.' ~Hebrews 13:5",
+    "You, Lord, are forgiving and good, abounding in love to all who call to you. ~Psalm 86:5",
+    "Therefore encourage one another and build each other up, just as in fact you are doing. ~1 Thessalonians 5:11",
+    "If we confess our sins, he is faithful and just and will forgive us our sins and purify us from all unrighteousness. ~1 John 1:9",
+    "Defend the weak and the fatherless; uphold the cause of the poor and the oppressed. ~Psalm 82:3",
+    "Very truly I tell you, whoever believes in me will do the works I have been doing, and they will do even greater things than these, because I am going to the Father. ~John 14:12",
+    "Humble yourselves, therefore, under God’s mighty hand, that he may lift you up in due time. ~1 Peter 5:6"
+];
+
+function getRandomItem(arr){
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    return arr[randomIndex];
 }
 
 const app = express();
@@ -54,7 +64,15 @@ app.get("/", function(req, res){
 app.get("/complement", function(req, res){
     res
     .json({
-        complement: getRandomComplement()
+        complement: getRandomItem(complements)
+    })
+    .end();
+});
+
+app.get("/verseday", function(req, res){
+    res
+    .json({
+        complement: getRandomItem(verseDay)
     })
     .end();
 });
