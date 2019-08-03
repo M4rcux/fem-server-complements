@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.complement-container-general {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.complement-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    min-width: 500px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.complement-title {
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 0;
+    text-align: center;
+    background-color: rgb(114, 114, 114);
+    width: 100%;
+    color: white;
+    border-radius: 5px 5px 0 0;
+}
+
+.complement-type {
+    margin-top: 10px;
+}
+
+.complement-content {
+    max-width: 450px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.complement-content em {
+    font-weight: bold;
+}
+
+.request-complement {
+    margin: 5px 0;
+}
+
+.content-verse {
+    font-family: 'Indie Flower', cursive;
+    
+}
+
+.content-complement {
+    font-family: 'Righteous', cursive;
+}
